@@ -18,7 +18,7 @@ public class Mycelium extends SquareLogic {
     private int attackCountdownMax = 100;
 
     private Direction from;
-    private int COLINIZATION_RATE = 3;
+    private int COLONIZATION_RATE = 3;
     private int sporeCountdownMax = 50;
 
     private static int FORK_RATE = 4;
@@ -97,7 +97,7 @@ public class Mycelium extends SquareLogic {
         //Starting to get saturated
         if(emptySquares.size() == 3) {
             //to colonize or not to colonize
-            if (ThreadLocalRandom.current().nextInt(0, COLINIZATION_RATE) == 0) {
+            if (ThreadLocalRandom.current().nextInt(0, COLONIZATION_RATE) == 0) {
                 Direction to = emptySquares.get(ThreadLocalRandom.current().nextInt(0, emptySquares.size()));
                 return SquareAction.move(to, new Spore(to, sporeCountdownMax));
             }

@@ -78,7 +78,7 @@ public class GameBoardController {
                 this.gameState.setTotalRounds(3000);
             } else {
                 this.gameBoard = new GameBoard(150);
-                this.gameState.setTotalRounds(2000);
+                this.gameState.setTotalRounds(20000);
             }
             setStartingPositions();
             if (isLeaderBoardMode) {
