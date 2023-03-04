@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.Optional;
 
 public class SearchAndDestroy extends SquareLogic {
@@ -28,5 +29,10 @@ public class SearchAndDestroy extends SquareLogic {
     @Override
     public String getSquareName() {
         return null;
+    }
+
+    @Override
+    public Color getColor() {
+        return new Color(255, 0, 0);
     }
 }

@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -37,5 +38,10 @@ public class DefaultSquare extends SquareLogic {
     @Override
     public String getSquareName() {
         return "La Raza";
+    }
+
+    @Override
+    public Color getColor() {
+        return new Color(255, 132, 0);
     }
 }

@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -33,5 +34,11 @@ public class DefaultSquare extends SquareLogic {
     @Override
     public String getSquareName() {
         return "Frank Abagnale Jr.";
+    }
+
+    @Override
+    public Color getColor() {
+        // yellow
+        return new Color(255, 255, 0);
     }
 }

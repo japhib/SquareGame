@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.Optional;
 
 public class AssassinSquare extends SquareLogic {
@@ -38,5 +39,11 @@ public class AssassinSquare extends SquareLogic {
     @Override
     public String getSquareName() {
         return "Assassin";
+    }
+
+    @Override
+    public Color getColor() {
+        // grey
+        return new Color(200, 200, 200);
     }
 }

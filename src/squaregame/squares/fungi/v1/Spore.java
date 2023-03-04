@@ -6,6 +6,7 @@ import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 import squaregame.squares.fungi.DirectionUtils;
 
+import java.awt.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -37,5 +38,10 @@ public class Spore extends SquareLogic {
     @Override
     public String getSquareName() {
         return null;
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.green;
     }
 }

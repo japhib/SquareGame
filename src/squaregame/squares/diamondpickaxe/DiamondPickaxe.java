@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.Optional;
 
 public class DiamondPickaxe extends SquareLogic {
@@ -57,5 +58,11 @@ public class DiamondPickaxe extends SquareLogic {
     @Override
     public String getSquareName() {
         return null;
+    }
+
+    @Override
+    public Color getColor() {
+        // blue
+        return new Color(0, 47, 255);
     }
 }

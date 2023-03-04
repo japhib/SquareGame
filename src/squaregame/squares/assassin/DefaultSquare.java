@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Optional;
@@ -30,4 +31,9 @@ public class DefaultSquare extends SquareLogic {
         return "Assassin Factory";
     }
 
+    @Override
+    public Color getColor() {
+        // grey
+        return new Color(150, 150, 150);
+    }
 }

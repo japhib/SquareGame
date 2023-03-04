@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.Optional;
 import java.util.Random;
 
@@ -26,5 +27,10 @@ public class DefaultSquare extends SquareLogic {
     @Override
     public String getSquareName() {
         return "The Great Wall";
+    }
+
+    @Override
+    public Color getColor() {
+        return new Color(255, 0, 0);
     }
 }

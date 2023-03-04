@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import squaregame.squares.fungi.DirectionUtils;
@@ -126,5 +127,10 @@ public class Mycelium extends SquareLogic {
             return preferred;
         }
         return emptySquares.get(ThreadLocalRandom.current().nextInt(0, emptySquares.size()));
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.green;
     }
 }

@@ -2,30 +2,18 @@ package squaregame.squares.spiderweb;
 
 import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
-import squaregame.squares.SquareLogic;
 
-import java.util.Random;
-
-public class DefaultSquare extends SquareLogic {
-    public static Random random = new Random();
-
-    @Override
-    public SquareAction run(SquareView view) {
-        var empty = view.getEmptyDirections();
-        if (empty.isEmpty()) {
-            return Wait();
-        }
-
-        var dir = empty.get(random.nextInt(empty.size()));
-        return SquareAction.replicate(
-            dir,
-            new SpiderWeb(SpiderWeb.START_RADIUS, dir.getOppositeDirection()),
-            new SpiderWeb(SpiderWeb.START_RADIUS, dir)
-        );
+public class DefaultSquare extends SpiderBase {
+    public DefaultSquare() {
+        super(0);
     }
 
     @Override
-    public String getSquareName() {
-        return "Spiderweb";
+    public SquareAction doRun(SquareView view) {
+//        int boardSize = view.getPlayerAllowedMetadata().getBoardSize();
+//        EggSac.TRAVEL_DISTANCE_BASE = boardSize / 5;
+//        EggSac.TRAVEL_DISTANCE_VARIANCE = boardSize / 5;
+
+        return new MotherSpider().run(view);
     }
 }

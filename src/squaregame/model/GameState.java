@@ -50,7 +50,6 @@ public class GameState {
         this.scoreBoard = new HashMap<>();
         playerList = new ArrayList<>();
         IntStream.rangeClosed(1, MAX_PLAYERS).forEach((i) -> playerList.add(new Player(Color.WHITE, aiOptions.get(0))));
-
     }
 
     public void setTotalRounds(int totalRounds) {

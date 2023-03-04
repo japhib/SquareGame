@@ -5,6 +5,7 @@ import squaregame.model.SquareAction;
 import squaregame.model.SquareView;
 import squaregame.squares.SquareLogic;
 
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -24,5 +25,11 @@ public class DefaultSquare extends SquareLogic {
     @Override
     public String getSquareName() {
         return "Make like bunnies";
+    }
+
+    @Override
+    public Color getColor() {
+        // light blue
+        return new Color(0, 229, 255);
     }
 }
